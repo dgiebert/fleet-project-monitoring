@@ -5,7 +5,4 @@ metadata:
   namespace: cattle-project-p-5fz8t-monitoring
 spec:
   loki:
-    configure_kubernetes_labels: true
-    extract_kubernetes_labels: true
     tenant: p-5fz8t
-    url: http://loki-gateway.loki.svc

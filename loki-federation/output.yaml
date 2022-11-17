@@ -2,3 +2,8 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: Output
 metadata:
   name: loki
+spec:
+  loki:
+    configure_kubernetes_labels: true
+    extract_kubernetes_labels: true
+    url: http://loki-gateway.loki.svc
