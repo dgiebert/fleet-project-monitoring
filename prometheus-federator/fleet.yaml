@@ -8,7 +8,7 @@ helm:
   values:
     global:
       cattle:
-        systemProjectId: 'a'
+        url: https://rancher.giebert.eu
     helmProjectOperator:
       helmController:
         enabled: false
@@ -19,3 +19,16 @@ helm:
           admin: admin
           edit: edit
           view: view
+
+# Needs Target Customization per Cluster
+targetCustomizations:
+- name: init
+  helm:
+    values:
+      global:
+        cattle:
+          clusterId: c-m-6wdzkpzz
+          systemProjectId: p-8fwg8
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-name: c-m-6wdzkpzz
