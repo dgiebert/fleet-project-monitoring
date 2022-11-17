@@ -1,0 +1,7 @@
+defaultNamespace: loki
+# Custom helm options
+helm:
+  releaseName: loki
+  chart: loki
+  repo: https://grafana.github.io/helm-charts
+  version: 3.3.4
