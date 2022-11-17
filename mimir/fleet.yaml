@@ -1,0 +1,11 @@
+
+defaultNamespace: mimir
+
+helm:
+  releaseName: mimir
+  chart: "mimir-distributed"
+  repo: "https://grafana.github.io/helm-charts/"
+  version: "3.3.0"
+  # values:
+  #   global:
+  #     dnsService: kube-dns
