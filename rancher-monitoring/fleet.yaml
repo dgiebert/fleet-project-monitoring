@@ -12,20 +12,23 @@ helm:
         datasources:
           url: http://mimir-nginx.mimir.svc:80/prometheus
       additionalDataSources:
-      - name: Logging
-        type: loki
-        access: proxy
-        url: http://loki-gateway.loki
-        editable: false
-        jsonData:
-          httpHeaderName1: 'X-Scope-OrgID'
-        secureJsonData:
-          httpHeaderValue1: 'p-8fwg8'
+- name: Loki
+  type: loki
+  access: proxy
+  url: http://loki-gateway.loki
+  editable: false
+  jsonData:
+    httpHeaderName1: 'X-Scope-OrgID'
+  secureJsonData:
+    httpHeaderValue1: 'p-8fwg8'
     prometheus:
       prometheusSpec:
         ignoreNamespaceSelectors: true # Use this to limit ServiceMonitors to deployed namespace
         remoteWrite:
           - url: http://mimir-nginx.mimir.svc:80/api/v1/push
+
+dependsOn:
+  - name: dgiebert-fleet-rancher-monitoring-crd
 
 # Patches needed for Fleet
 diff:

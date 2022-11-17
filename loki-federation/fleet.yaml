@@ -1,3 +1,7 @@
+dependsOn:
+  - name: dgiebert-fleet-loki
+  - name: dgiebert-fleet-prometheus-federator
+
 # https://github.com/rancher/fleet/issues/633
 # Needs Target Customization per Cluster
 targetCustomizations:
@@ -8,3 +12,4 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       management.cattle.io/cluster-name: c-m-pp9mvrlx
+

@@ -5,3 +5,6 @@ helm:
   chart: rancher-logging
   repo: https://charts.rancher.io
   version: 101.0.0+up3.17.7
+
+dependsOn:
+  - name: dgiebert-fleet-rancher-logging-crd

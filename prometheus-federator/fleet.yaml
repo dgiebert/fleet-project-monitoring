@@ -20,6 +20,9 @@ helm:
           edit: edit
           view: view
 
+dependsOn:
+  - name: dgiebert-fleet-rancher-monitoring
+
 # https://github.com/rancher/fleet/issues/633
 # Needs Target Customization per Cluster
 targetCustomizations:
