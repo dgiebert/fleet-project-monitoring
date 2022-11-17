@@ -5,3 +5,14 @@ helm:
   chart: prometheus-federator
   repo: https://charts.rancher.io
   version: 1.0.0+up0.1.1
+  values:
+    helmProjectOperator:
+      helmController:
+        enabled: false
+      helmLocker:
+        enabled: false 
+      releaseRoleBindings:
+        clusterRoleRefs:
+          admin: admin
+          edit: edit
+          view: view
