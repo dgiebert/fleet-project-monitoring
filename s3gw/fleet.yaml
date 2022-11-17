@@ -1,7 +1,7 @@
-defaultNamespace: cattle-monitoring-system
+defaultNamespace: s3gw
 # Custom helm options
 helm:
-  releaseName: prometheus-federator
-  chart: prometheus-federator
+  releaseName: s3gw
+  chart: s3gw
   repo: https://aquarist-labs.github.io/s3gw-charts/
   version: 0.8.0
