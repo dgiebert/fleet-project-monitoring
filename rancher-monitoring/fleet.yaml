@@ -6,12 +6,14 @@ helm:
   repo: https://charts.rancher.io
   version: 101.0.0+up19.0.3
   values:
+    # Connect Grafana to Mimir
     grafana:
       sidecar:
         datasources:
           url: http://mimir-nginx.mimir.svc:80/prometheus
     prometheus:
       prometheusSpec:
+        ignoreNamespaceSelectors: true # Use this to limit ServiceMonitors to deployed namespace
         remoteWrite:
           - url: http://mimir-nginx.mimir.svc:80/api/v1/push
 
@@ -23,8 +25,10 @@ diff:
     name: rancher-monitoring-admission
     operations:
     - {"op": "remove", "path": "/webhooks/timeoutSeconds"}
+    - {"op": "remove", "path": "/webhooks/failurePolicy"}
   - apiVersion: admissionregistration.k8s.io/v1
     kind: ValidatingWebhookConfiguration
     name: rancher-monitoring-admission
     operations:
     - {"op": "remove", "path": "/webhooks/timeoutSeconds"}
+    - {"op": "remove", "path": "/webhooks/failurePolicy"}
