@@ -1,5 +1,8 @@
 # https://github.com/rancher/fleet/issues/633
 # Needs Target Customization per Cluster
+helm:
+  releaseName: loki-federation
+  
 targetCustomizations:
   yaml:
     overlays:
