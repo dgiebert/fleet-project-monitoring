@@ -5,3 +5,8 @@ helm:
   chart: loki
   repo: https://grafana.github.io/helm-charts
   version: 3.3.4
+  values:
+    write:
+      replicas: 1
+    read:
+      replicas: 1

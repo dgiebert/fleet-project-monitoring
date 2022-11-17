@@ -1,4 +1,4 @@
-defaultNamespace: cattle-monitoring-system
+defaultNamespace: cattle-logging-system
 # Custom helm options
 helm:
   releaseName: rancher-logging
