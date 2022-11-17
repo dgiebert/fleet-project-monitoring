@@ -6,6 +6,9 @@ helm:
   repo: https://charts.rancher.io
   version: 1.0.0+up0.1.1
   values:
+    global:
+      cattle:
+        systemProjectId: 'a'
     helmProjectOperator:
       helmController:
         enabled: false
