@@ -1,11 +1,11 @@
-defaultNamespace: s3gw
-# Custom helm options
-helm:
-  releaseName: s3gw
-  chart: s3gw
-  repo: https://aquarist-labs.github.io/s3gw-charts/
-  version: 0.8.0
-  values:
-    storageClass:
-      name: local-path
-      create: false
+# defaultNamespace: s3gw
+# # Custom helm options
+# helm:
+#   releaseName: s3gw
+#   chart: s3gw
+#   repo: https://aquarist-labs.github.io/s3gw-charts/
+#   version: 0.8.0
+#   values:
+#     storageClass:
+#       name: local-path
+#       create: false
