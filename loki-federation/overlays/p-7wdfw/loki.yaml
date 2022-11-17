@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: loki
   namespace: cattle-project-p-7wdfw-monitoring
+  labels:
+    grafana_dashboard: "1"
 data:
   loki.yaml: |-
     apiVersion: 1
