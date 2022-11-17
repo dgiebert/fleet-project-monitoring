@@ -2,4 +2,4 @@ apiVersion: helm.cattle.io/v1alpha1
 kind: ProjectHelmChart
 metadata:
   name: project-monitoring
-  namespace: cattle-project-p-5fz8t
+  namespace: cattle-project-p-nzcdq

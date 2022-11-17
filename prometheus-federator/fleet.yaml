@@ -31,11 +31,11 @@ targetCustomizations:
     values:
       global:
         cattle:
-          clusterId: c-m-pp9mvrlx
-          systemProjectId: p-jspjx
+          clusterId: c-m-np2kjb4x
+          systemProjectId: p-zbm6q
   yaml:
     overlays:
-    - p-jspjx
+    - p-zbm6q
   clusterSelector:
     matchLabels:
-      management.cattle.io/cluster-name: c-m-pp9mvrlx
+      management.cattle.io/cluster-name: c-m-np2kjb4x

@@ -5,11 +5,11 @@ dependsOn:
 # https://github.com/rancher/fleet/issues/633
 # Needs Target Customization per Cluster
 targetCustomizations:
-- name: p-5fz8t
+- name: c-m-np2kjb4x
   yaml:
     overlays:
-    - p-5fz8t
+    - c-m-np2kjb4x
   clusterSelector:
     matchLabels:
-      management.cattle.io/cluster-name: c-m-pp9mvrlx
+      management.cattle.io/cluster-name: c-m-np2kjb4x
 
