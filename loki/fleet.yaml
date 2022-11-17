@@ -5,3 +5,6 @@ helm:
   chart: loki
   repo: https://grafana.github.io/helm-charts
   version: 3.3.4
+  values:
+    minio:
+      enabled: true
