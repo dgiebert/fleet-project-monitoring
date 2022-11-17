@@ -1,0 +1,25 @@
+
+# This file and all contents in it are OPTIONAL.
+
+# The namespace this chart will be installed and restricted to,
+# if not specified the chart will be installed to "default"
+namespace: cattle-monitoring-system
+
+# Custom helm options
+helm:
+  # The release name to use. If empty a generated release name will be used
+  releaseName: mimir
+
+  # The directory of the chart in the repo.  Also any valid go-getter supported
+  # URL can be used there is specify where to download the chart from.
+  # If repo below is set this value if the chart name in the repo
+  chart: "mimir-distributed"
+
+  # An https to a valid Helm repository to download the chart from
+  repo: "https://grafana.github.io/helm-charts/"
+
+  # Used if repo is set to look up the version of the chart
+  version: "3.3.0"
+  # values:
+  #   global:
+  #     dnsService: kube-dns
