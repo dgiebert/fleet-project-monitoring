@@ -30,6 +30,9 @@ targetCustomizations:
         cattle:
           clusterId: c-m-6wdzkpzz
           systemProjectId: p-8fwg8
+  yaml:
+    overlays:
+    - p-7wdfw
   clusterSelector:
     matchLabels:
       management.cattle.io/cluster-name: c-m-6wdzkpzz
