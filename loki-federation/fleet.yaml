@@ -1,10 +1,10 @@
 # https://github.com/rancher/fleet/issues/633
 # Needs Target Customization per Cluster
 targetCustomizations:
-- name: p-7wdfw
+- name: p-5fz8t
   yaml:
     overlays:
-    - p-7wdfw
+    - p-5fz8t
   clusterSelector:
     matchLabels:
-      management.cattle.io/cluster-name: c-m-6wdzkpzz
+      management.cattle.io/cluster-name: c-m-pp9mvrlx
