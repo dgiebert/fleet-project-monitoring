@@ -9,15 +9,17 @@ helm:
     prometheus:
       remoteWrite:
         - url: http://mimir-ingester.mimir:8080/api/v1/push
+
+# Patches needed for Fleet
 diff:
   comparePatches:
   - apiVersion: admissionregistration.k8s.io/v1
     kind: MutatingWebhookConfiguration
     name: rancher-monitoring-admission
     operations:
-    - {"op": "remove", "path": "/webhooks"}
+    - {"op": "remove", "path": "/webhooks/timeoutSeconds"}
   - apiVersion: admissionregistration.k8s.io/v1
     kind: ValidatingWebhookConfiguration
     name: rancher-monitoring-admission
     operations:
-    - {"op": "remove", "path": "/webhooks"}
+    - {"op": "remove", "path": "/webhooks/timeoutSeconds"}
