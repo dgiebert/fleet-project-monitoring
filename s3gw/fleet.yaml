@@ -1,0 +1,7 @@
+defaultNamespace: cattle-monitoring-system
+# Custom helm options
+helm:
+  releaseName: prometheus-federator
+  chart: prometheus-federator
+  repo: https://aquarist-labs.github.io/s3gw-charts/
+  version: 0.8.0

@@ -20,6 +20,7 @@ helm:
           edit: edit
           view: view
 
+# https://github.com/rancher/fleet/issues/633
 # Needs Target Customization per Cluster
 targetCustomizations:
 - name: init
