@@ -2,8 +2,9 @@
 # Needs Target Customization per Cluster
 helm:
   releaseName: loki-federation
-  
+
 targetCustomizations:
+- name: p-7wdfw
   yaml:
     overlays:
     - p-7wdfw
