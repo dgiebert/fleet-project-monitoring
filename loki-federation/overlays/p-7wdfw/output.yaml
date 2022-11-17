@@ -1,0 +1,11 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Output
+metadata:
+  name: loki
+  namespace: cattle-project-p-7wdfw-monitoring
+spec:
+  loki:
+    configure_kubernetes_labels: true
+    extract_kubernetes_labels: true
+    tenant: p-7wdfw
+    url: http://loki-gateway.loki.svc

@@ -1,0 +1,8 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Flow
+metadata:
+  name: loki
+  namespace: cattle-project-p-7wdfw-monitoring
+spec:
+  localOutputRefs:
+  - loki
