@@ -6,9 +6,14 @@ helm:
   repo: https://charts.rancher.io
   version: 101.0.0+up19.0.3
   values:
+    grafana:
+      sidecar:
+        datasources:
+          url: http://mimir-nginx.mimir.svc:80/prometheus
     prometheus:
-      remoteWrite:
-        - url: http://mimir-ingester.mimir:8080/api/v1/push
+      prometheusSpec:
+        remoteWrite:
+          - url: http://mimir-nginx.mimir.svc:80/api/v1/push
 
 # Patches needed for Fleet
 diff:
