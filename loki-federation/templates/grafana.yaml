@@ -4,6 +4,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
   name: rancher-monitoring-loki
+  namespace: "cattle-project-{{ .Values.projectId }}-monitoring"
 data:
   loki.json: |-
     {

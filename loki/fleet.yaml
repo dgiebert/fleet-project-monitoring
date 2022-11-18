@@ -8,3 +8,12 @@ helm:
   values:
     minio:
       enabled: true
+
+# Patches needed for Fleet
+diff:
+  comparePatches:
+  - apiVersion: apps/v1
+    kind: StatefulSet
+    name: loki-read
+    operations:
+    - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy/whenScaled"}

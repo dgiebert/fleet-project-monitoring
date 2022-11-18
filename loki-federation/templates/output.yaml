@@ -2,6 +2,7 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: Output
 metadata:
   name: loki
+  namespace: "cattle-project-{{ .Values.projectId }}-monitoring"
 spec:
   loki:
     configure_kubernetes_labels: true

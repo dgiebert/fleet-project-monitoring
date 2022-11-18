@@ -8,6 +8,8 @@ helm:
   values:
     global:
       cattle:
+        clusterId: global.fleet.clusterLabels.management.cattle.io/cluster-name
+        systemProjectId: global.fleet.clusterLabels.field.cattle.io/systemProjectId
         url: https://rancher.giebert.eu
     helmProjectOperator:
       helmController:
@@ -19,23 +21,3 @@ helm:
           admin: admin
           edit: edit
           view: view
-
-dependsOn:
-  - name: dgiebert-fleet-rancher-monitoring
-
-# https://github.com/rancher/fleet/issues/633
-# Needs Target Customization per Cluster
-targetCustomizations:
-- name: init
-  helm:
-    values:
-      global:
-        cattle:
-          clusterId: c-m-np2kjb4x
-          systemProjectId: p-zbm6q
-  yaml:
-    overlays:
-    - p-zbm6q
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-name: c-m-np2kjb4x

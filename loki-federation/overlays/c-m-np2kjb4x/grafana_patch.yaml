@@ -1,5 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: rancher-monitoring-loki
-  namespace: cattle-project-p-5fz8t-monitoring

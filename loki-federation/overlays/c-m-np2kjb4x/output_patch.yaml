@@ -1,8 +1,0 @@
-apiVersion: logging.banzaicloud.io/v1beta1
-kind: Output
-metadata:
-  name: loki
-  namespace: cattle-project-p-nzcdq-monitoring
-spec:
-  loki:
-    tenant: p-nzcdq

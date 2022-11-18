@@ -2,14 +2,12 @@ dependsOn:
   - name: dgiebert-fleet-loki
   - name: dgiebert-fleet-prometheus-federator
 
-# https://github.com/rancher/fleet/issues/633
-# Needs Target Customization per Cluster
-targetCustomizations:
-- name: c-m-np2kjb4x
-  yaml:
-    overlays:
-    - c-m-np2kjb4x
-  clusterSelector:
-    matchLabels:
-      management.cattle.io/cluster-name: c-m-np2kjb4x
+# Custom helm options
+helm:
+  releaseName: loki-federation
+  chart: ""
+  repo: ""
+  version: ""
 
+  values:
+    projectId: global.fleet.clusterLabels.field.cattle.io/projectId
