@@ -9,7 +9,7 @@ helm:
     global:
       cattle:
         clusterId: global.fleet.clusterLabels.management.cattle.io/cluster-name
-        # systemProjectId: global.fleet.clusterLabels.field.cattle.io/systemProjectId
+        systemProjectId: global.fleet.clusterLabels.management.cattle.io/systemProjectId
         url: https://rancher.giebert.eu
     helmProjectOperator:
       helmController:
