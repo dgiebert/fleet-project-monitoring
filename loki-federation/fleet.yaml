@@ -1,7 +1,7 @@
 dependsOn:
   - name: dgiebert-fleet-loki
   - name: dgiebert-fleet-prometheus-federator
-
+  - name: dgiebert-fleet-project-monitor
 # Custom helm options
 helm:
   releaseName: loki-federation
@@ -11,6 +11,4 @@ helm:
 
   values:
     projectId: global.fleet.clusterLabels.management.cattle.io/projectId
-
-dependsOn:
-  - name: dgiebert-fleet-project-monitor
+  

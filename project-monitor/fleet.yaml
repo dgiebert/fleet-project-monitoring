@@ -1,5 +1,4 @@
 dependsOn:
-  - name: dgiebert-fleet-loki
   - name: dgiebert-fleet-prometheus-federator
 
 # Custom helm options
