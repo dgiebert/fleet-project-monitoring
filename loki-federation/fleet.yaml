@@ -10,4 +10,4 @@ helm:
   version: ""
 
   values:
-    projectId: global.fleet.clusterLabels.field.cattle.io/projectId
+    projectId: global.fleet.clusterLabels.management.cattle.io/projectId
