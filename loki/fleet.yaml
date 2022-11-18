@@ -16,4 +16,4 @@ diff:
     kind: StatefulSet
     name: loki-read
     operations:
-    - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy"}
+    - {"op": "remove", "path":"/spec/persistentVolumeClaimRetentionPolicy/"}
