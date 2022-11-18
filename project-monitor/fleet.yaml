@@ -4,13 +4,10 @@ dependsOn:
 
 # Custom helm options
 helm:
-  releaseName: loki-federation
+  releaseName: project-monitor
   chart: ""
   repo: ""
   version: ""
 
   values:
     projectId: global.fleet.clusterLabels.management.cattle.io/projectId
-
-dependsOn:
-  - name: dgiebert-fleet-project-monitor
